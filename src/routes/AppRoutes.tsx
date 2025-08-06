@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import {
     Cart,
     Checkout,
@@ -12,7 +13,6 @@ import {
     Register,
     Wishlist,
 } from '@/pages/importData'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 const AppRoutes = () => {
     return (
@@ -32,7 +32,7 @@ const AppRoutes = () => {
                     <Route path={"*"} element={<NotFound />} />
                 </Route>
             </Routes>
-        </BrowserRouter >
+        </BrowserRouter>
     )
 }
 
