@@ -1,20 +1,17 @@
 interface CatalogItem {
-    id: string,
+    id: number,
     name: string,
-    path: string,
 };
 
 interface CatalogSubcategory {
-    id: string,
+    id: number,
     name: string,
-    path: string,
     items: CatalogItem[]
 };
 
 export interface Catalog {
-    id: string,
+    id: number,
     name: string,
-    path: string,
     img: string,
     subcategory: CatalogSubcategory[]
 }

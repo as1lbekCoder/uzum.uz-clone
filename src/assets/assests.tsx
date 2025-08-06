@@ -1,12 +1,9 @@
 /*                      ======== GLOBAL assets import ========                            */
 
 // Carousel uchun Img Imports start
-export { default as BannerImg1 } from "./banners/slider1.png"
 export { default as BannerImg2 } from "./banners/slider2.png"
-export { default as BannerImg3 } from "./banners/slider3.png"
 export { default as BannerImg4 } from "./banners/slider4.png"
 export { default as BannerImg5 } from "./banners/slider5.png"
-export { default as BannerImg6 } from "./banners/slider6.png"
 export { default as BannerImg7 } from "./banners/slider7.png"
 export { default as BannerImg8 } from "./banners/slider8.png"
 export { default as BannerImg9 } from "./banners/slider9.png"

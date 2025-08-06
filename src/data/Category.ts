@@ -1,802 +1,800 @@
 import type { Catalog } from "@/types/Catalog.type";
-import { nanoid } from "nanoid"
 import {
-    Aksessuarlar,
-    AutoTovarlar,
-    BolalarTovarlari,
-    Dacha,
+    // Aksessuarlar,
+    // AutoTovarlar,
+    // BolalarTovarlari,
+    // Dacha,
     Elektronika,
-    GuzallikVaParvarish,
-    HayvonlarTovarlari,
-    KanselyariyaTovarlari,
-    Kitoblar,
-    Kiyim,
-    MaisheyTexnika,
-    MaishiyKimyoviyModdalar,
-    OziqOvqat,
-    Poyabzal,
-    Qurilish,
-    Salomatlik,
-    SportVaHordiq,
-    UyRuzgorBuyumlari,
-    XobbiVaIjod
+    // GuzallikVaParvarish,
+    // HayvonlarTovarlari,
+    // KanselyariyaTovarlari,
+    // Kitoblar,
+    // Kiyim,
+    // MaisheyTexnika,
+    // MaishiyKimyoviyModdalar,
+    // OziqOvqat,
+    // Poyabzal,
+    // Qurilish,
+    // Salomatlik,
+    // SportVaHordiq,
+    // UyRuzgorBuyumlari,
+    // XobbiVaIjod
 } from "@/assets/assests"
-
 
 export const catalogs: Catalog[] = [
     {
-        id: nanoid(),
+        id: 100,
         name: "Elektronika",
         img: Elektronika,
-        path: "category/elektronika-10020",
         subcategory: [
             {
-                id: nanoid(),
+                id: 101,
                 name: "Smartfonlar va telefonlar",
-                path: "category/smartfonlar-va-telefonlar-10044",
                 items: [
                     {
-                        id: nanoid(),
+                        id: 102,
                         name: "Smartfonlar uchun aksessuarlar",
-                        path: "category/aksessuarlar-va-ehtiyot-qismlari-10398"
                     },
                     {
-                        id: nanoid(),
+                        id: 103,
                         name: "Knopkali telefonlar",
-                        path: "category/knopkali-telefonlar-14262"
                     },
                     {
-                        id: nanoid(),
+                        id: 104,
                         name: "Smartfonlar",
-                        path: "category/smartfonlar-12690"
                     },
                     {
-                        id: nanoid(),
+                        id: 105,
                         name: "Ehtiyot qismlari va ta'mirlash",
-                        path: "category/ehtiyot-qismlar-va-tamirlash-15335"
                     },
                     {
-                        id: nanoid(),
+                        id: 106,
                         name: "Statsionar telefonlar",
-                        path: "category/statsionar-telefonlar-13733"
                     },
                 ]
             },
 
             {
-                id: nanoid(),
+                id: 107,
                 name: "Noutbuklar, planshetlar va elektron kitoblar",
-                path: "category/noutbuklar-planshetlar-va-elektron-10030",
                 items: [
                     {
-                        id: nanoid(),
+                        id: 108,
                         name: "Noutbuklar",
-                        path: "category/noutbuklar-15718"
                     },
                     {
-                        id: nanoid(),
+                        id: 109,
                         name: "Planshetlar va elektron kitoblar",
-                        path: "category/planshetlar-va-elektron-kitoblar-15716"
                     },
                     {
-                        id: nanoid(),
+                        id: 110,
                         name: "Noutbuk uchun aksessuarlar",
-                        path: "category/noutbuk-uchun-aksessuarlar-10487"
                     },
                 ]
             },
 
             {
-                id: nanoid(),
-                name: "Smartfonlar va telefonlar",
-                path: "category/smartfonlar-va-telefonlar-10044",
+                id: 111,
+                name: "Televizorlar va videotexnikalar",
                 items: [
                     {
-                        id: nanoid(),
-                        name: "Smartfonlar uchun aksessuarlar",
-                        path: "category/aksessuarlar-va-ehtiyot-qismlari-10398"
+                        id: 112,
+                        name: "Kabellar va adapterlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Knopkali telefonlar",
-                        path: "category/knopkali-telefonlar-14262"
+                        id: 113,
+                        name: "Televizorlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Smartfonlar",
-                        path: "category/smartfonlar-12690"
+                        id: 114,
+                        name: "Tyuner va resiverlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Ehtiyot qismlari va ta'mirlash",
-                        path: "category/ehtiyot-qismlar-va-tamirlash-15335"
+                        id: 115,
+                        name: "Televizor aksessuarlari",
                     },
                     {
-                        id: nanoid(),
-                        name: "Statsionar telefonlar",
-                        path: "category/statsionar-telefonlar-13733"
+                        id: 116,
+                        name: "Televizor uchun stend va kronshteynlar",
+                    },
+                    {
+                        id: 117,
+                        name: "TV-pristavkalar va media pleerlar",
+                    },
+                    {
+                        id: 118,
+                        name: "Proyektorlar va aksessuarlar",
+                    },
+                    {
+                        id: 119,
+                        name: "Raqamli va sun'iy yo'ldosh TV",
+                    },
+                    {
+                        id: 120,
+                        name: "Ichki joylashadigan televizorlar",
                     },
                 ]
             },
 
             {
-                id: nanoid(),
-                name: "Noutbuklar, planshetlar va elektron kitoblar",
-                path: "category/noutbuklar-planshetlar-va-elektron-10030",
+                id: 121,
+                name: "Kompyuter texnikasi",
                 items: [
                     {
-                        id: nanoid(),
-                        name: "Noutbuklar",
-                        path: "category/noutbuklar-15718"
+                        id: 122,
+                        name: "Kompyuter aksessuarlari",
                     },
                     {
-                        id: nanoid(),
-                        name: "Planshetlar va elektron kitoblar",
-                        path: "category/planshetlar-va-elektron-kitoblar-15716"
+                        id: 123,
+                        name: "Kompyuter texnikalari uchun butlovchi qismlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Noutbuk uchun aksessuarlar",
-                        path: "category/noutbuk-uchun-aksessuarlar-10487"
+                        id: 124,
+                        name: "Kompyuterning tashqi qurilmalari",
+                    },
+                    {
+                        id: 125,
+                        name: "Ma'lumotlarni saqlash",
+                    },
+                    {
+                        id: 126,
+                        name: "Dasturiy ta'minot",
                     },
                 ]
             },
 
             {
-                id: nanoid(),
-                name: "Smartfonlar va telefonlar",
-                path: "category/smartfonlar-va-telefonlar-10044",
+                id: 127,
+                name: "Quloqchinlar va audio texnikalar",
                 items: [
                     {
-                        id: nanoid(),
-                        name: "Smartfonlar uchun aksessuarlar",
-                        path: "category/aksessuarlar-va-ehtiyot-qismlari-10398"
+                        id: 128,
+                        name: "Quloqchinlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Knopkali telefonlar",
-                        path: "category/knopkali-telefonlar-14262"
+                        id: 129,
+                        name: "Audio texnika",
                     },
                     {
-                        id: nanoid(),
-                        name: "Smartfonlar",
-                        path: "category/smartfonlar-12690"
+                        id: 130,
+                        name: "Proigrivatel uchun aksessuarlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Ehtiyot qismlari va ta'mirlash",
-                        path: "category/ehtiyot-qismlar-va-tamirlash-15335"
+                        id: 131,
+                        name: "Periferiya va aksessuarlar",
+                    }
+                ]
+            },
+
+            {
+                id: 132,
+                name: "Aqlli soatlar va fitnes bilaguzuklar",
+                items: [
+                    {
+                        id: 133,
+                        name: "Aqlli soatlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Statsionar telefonlar",
-                        path: "category/statsionar-telefonlar-13733"
+                        id: 134,
+                        name: "Qayishlar",
+                    },
+                    {
+                        id: 135,
+                        name: "Fitnes bilaguzuklar",
+                    },
+                    {
+                        id: 136,
+                        name: "Kabellar va zaryadlovchi qurilmalar",
+                    },
+                    {
+                        id: 137,
+                        name: "Aqlli gadjetlar",
+                    },
+                    {
+                        id: 138,
+                        name: "Soatlar va fitnes bilaguzuklar uchun himoya",
                     },
                 ]
             },
 
             {
-                id: nanoid(),
-                name: "Noutbuklar, planshetlar va elektron kitoblar",
-                path: "category/noutbuklar-planshetlar-va-elektron-10030",
+                id: 139,
+                name: "Geymerlar uchun mahsulotlar",
                 items: [
                     {
-                        id: nanoid(),
-                        name: "Noutbuklar",
-                        path: "category/noutbuklar-15718"
+                        id: 140,
+                        name: "O'yin pristavkalari",
                     },
                     {
-                        id: nanoid(),
-                        name: "Planshetlar va elektron kitoblar",
-                        path: "category/planshetlar-va-elektron-kitoblar-15716"
+                        id: 141,
+                        name: "O'yin sichqonchalari",
                     },
                     {
-                        id: nanoid(),
-                        name: "Noutbuk uchun aksessuarlar",
-                        path: "category/noutbuk-uchun-aksessuarlar-10487"
+                        id: 142,
+                        name: "O'yin klaviaturalari",
+                    },
+                    {
+                        id: 143,
+                        name: "O'yin uchun quloqchinlar",
+                    },
+                    {
+                        id: 144,
+                        name: "O'yinlar",
+                    },
+                    {
+                        id: 145,
+                        name: "O'yin gilamchalari",
+                    },
+                    {
+                        id: 146,
+                        name: "O'yin monitorlari",
+                    },
+                    {
+                        id: 147,
+                        name: "O'yin noutbuklari",
+                    },
+                    {
+                        id: 148,
+                        name: "O'yin g'ildirakli va pedallari",
+                    },
+                    {
+                        id: 149,
+                        name: "VR-garnituralar",
                     },
                 ]
             },
 
             {
-                id: nanoid(),
-                name: "Smartfonlar va telefonlar",
-                path: "category/smartfonlar-va-telefonlar-10044",
+                id: 150,
+                name: "Ofis texnikasi",
                 items: [
                     {
-                        id: nanoid(),
-                        name: "Smartfonlar uchun aksessuarlar",
-                        path: "category/aksessuarlar-va-ehtiyot-qismlari-10398"
+                        id: 151,
+                        name: "Ofis jihozlari uchun butlovchi qismlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Knopkali telefonlar",
-                        path: "category/knopkali-telefonlar-14262"
+                        id: 152,
+                        name: "Ofis jihozlari",
                     },
                     {
-                        id: nanoid(),
-                        name: "Smartfonlar",
-                        path: "category/smartfonlar-12690"
-                    },
-                    {
-                        id: nanoid(),
-                        name: "Ehtiyot qismlari va ta'mirlash",
-                        path: "category/ehtiyot-qismlar-va-tamirlash-15335"
-                    },
-                    {
-                        id: nanoid(),
-                        name: "Statsionar telefonlar",
-                        path: "category/statsionar-telefonlar-13733"
+                        id: 153,
+                        name: "Aksessuarlar va ofis jihozlari parvarishi",
                     },
                 ]
             },
 
             {
-                id: nanoid(),
-                name: "Noutbuklar, planshetlar va elektron kitoblar",
-                path: "category/noutbuklar-planshetlar-va-elektron-10030",
+                id: 154,
+                name: "Foto va video texnika",
                 items: [
                     {
-                        id: nanoid(),
-                        name: "Noutbuklar",
-                        path: "category/noutbuklar-15718"
+                        id: 155,
+                        name: "Fotosuratchilar uchun uskunalar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Planshetlar va elektron kitoblar",
-                        path: "category/planshetlar-va-elektron-kitoblar-15716"
+                        id: 156,
+                        name: "Foto va video kameralar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Noutbuk uchun aksessuarlar",
-                        path: "category/noutbuk-uchun-aksessuarlar-10487"
+                        id: 157,
+                        name: "Foto va video kameralar uchun aksessuarlar",
+                    }
+                ]
+            },
+
+            {
+                id: 158,
+                name: "Aqlli uy va xavfsizlik",
+                items: [
+                    {
+                        id: 159,
+                        name: "Videokuzatuv",
+                    },
+                    {
+                        id: 160,
+                        name: "Aqlli uy",
+                    },
+                    {
+                        id: 161,
+                        name: "Uy xavfsizligi",
                     },
                 ]
             },
 
             {
-                id: nanoid(),
-                name: "Smartfonlar va telefonlar",
-                path: "category/smartfonlar-va-telefonlar-10044",
+                id: 162,
+                name: "Elektronikalar uchun aksessuarlar",
                 items: [
                     {
-                        id: nanoid(),
-                        name: "Smartfonlar uchun aksessuarlar",
-                        path: "category/aksessuarlar-va-ehtiyot-qismlari-10398"
+                        id: 163,
+                        name: "USB hablar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Knopkali telefonlar",
-                        path: "category/knopkali-telefonlar-14262"
+                        id: 164,
+                        name: "Akkumulyatorlar uchun zaryadlovchi qurilmalari",
                     },
                     {
-                        id: nanoid(),
-                        name: "Smartfonlar",
-                        path: "category/smartfonlar-12690"
+                        id: 165,
+                        name: "Tarmoq filtrlari",
                     },
                     {
-                        id: nanoid(),
-                        name: "Ehtiyot qismlari va ta'mirlash",
-                        path: "category/ehtiyot-qismlar-va-tamirlash-15335"
+                        id: 166,
+                        name: "Konnektorlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Statsionar telefonlar",
-                        path: "category/statsionar-telefonlar-13733"
-                    },
-                ]
-            },
-
-            {
-                id: nanoid(),
-                name: "Noutbuklar, planshetlar va elektron kitoblar",
-                path: "category/noutbuklar-planshetlar-va-elektron-10030",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "Noutbuklar",
-                        path: "category/noutbuklar-15718"
+                        id: 167,
+                        name: "Kabel himoyasi",
                     },
                     {
-                        id: nanoid(),
-                        name: "Planshetlar va elektron kitoblar",
-                        path: "category/planshetlar-va-elektron-kitoblar-15716"
+                        id: 168,
+                        name: "Uzaytirgichlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Noutbuk uchun aksessuarlar",
-                        path: "category/noutbuk-uchun-aksessuarlar-10487"
-                    },
-                ]
-            },
-
-            {
-                id: nanoid(),
-                name: "Smartfonlar va telefonlar",
-                path: "category/smartfonlar-va-telefonlar-10044",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "Smartfonlar uchun aksessuarlar",
-                        path: "category/aksessuarlar-va-ehtiyot-qismlari-10398"
+                        id: 169,
+                        name: "Akkumulyator va batareyalar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Knopkali telefonlar",
-                        path: "category/knopkali-telefonlar-14262"
+                        id: 170,
+                        name: "Kabellar uchun tutqichlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Smartfonlar",
-                        path: "category/smartfonlar-12690"
+                        id: 171,
+                        name: "Tarmoqlagichlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Ehtiyot qismlari va ta'mirlash",
-                        path: "category/ehtiyot-qismlar-va-tamirlash-15335"
+                        id: 172,
+                        name: "Elektr tarmoqlagichlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Statsionar telefonlar",
-                        path: "category/statsionar-telefonlar-13733"
+                        id: 173,
+                        name: "Kabellar uchun organayzerlar",
+                    },
+                    {
+                        id: 174,
+                        name: "Dok-stansiyalar",
+                    },
+                    {
+                        id: 175,
+                        name: "Kuchlanishni o'zgartirgichlar",
+                    },
+                    {
+                        id: 176,
+                        name: "Quyosh panellar va batareyalari",
+                    },
+                    {
+                        id: 177,
+                        name: "Simlar uchun qutilar",
                     },
                 ]
             },
 
             {
-                id: nanoid(),
-                name: "Noutbuklar, planshetlar va elektron kitoblar",
-                path: "category/noutbuklar-planshetlar-va-elektron-10030",
+                id: 178,
+                name: "Soatlar va elektron budilniklar",
                 items: [
                     {
-                        id: nanoid(),
-                        name: "Noutbuklar",
-                        path: "category/noutbuklar-15718"
+                        id: 179,
+                        name: "Elektron budilniklar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Planshetlar va elektron kitoblar",
-                        path: "category/planshetlar-va-elektron-kitoblar-15716"
+                        id: 180,
+                        name: "Proyeksiya soatlari",
                     },
                     {
-                        id: nanoid(),
-                        name: "Noutbuk uchun aksessuarlar",
-                        path: "category/noutbuk-uchun-aksessuarlar-10487"
+                        id: 181,
+                        name: "Radio budilniklar",
+                    },
+                    {
+                        id: 182,
+                        name: "Aromabudilniklar va katrijlar",
+                    }
+                ]
+            },
+
+            {
+                id: 183,
+                name: "Optik anjomlar",
+                items: [
+                    {
+                        id: 184,
+                        name: "Teleskoplar",
+                    },
+                    {
+                        id: 185,
+                        name: "Teatr binokllari",
+                    },
+                    {
+                        id: 186,
+                        name: "Okulyarlar",
+                    },
+                    {
+                        id: 187,
+                        name: "Mikroskoplar uchun aksessuarlar",
+                    },
+                    {
+                        id: 188,
+                        name: "Teleskop aksessuarlari",
+                    }
+                ]
+            },
+            {
+                id: 189,
+                name: "Navigatorlar",
+                items: [
+                    {
+                        id: 190,
+                        name: "GPS-trekerlar va GPS-mayoqlar",
+                    },
+                    {
+                        id: 191,
+                        name: "Sayyohlik navigatorlari",
+                    },
+                    {
+                        id: 192,
+                        name: "Elektron kompaslar",
+                    },
+                    {
+                        id: 193,
+                        name: "navigatorlar uchun aksessuarlar",
                     },
                 ]
             },
-            
             {
-                id: nanoid(),
-                name: "Smartfonlar va telefonlar",
-                path: "category/smartfonlar-va-telefonlar-10044",
+                id: 194,
+                name: "Kvadrokopterlar va aksessuarlar",
                 items: [
                     {
-                        id: nanoid(),
-                        name: "Smartfonlar uchun aksessuarlar",
-                        path: "category/aksessuarlar-va-ehtiyot-qismlari-10398"
+                        id: 195,
+                        name: "Kvadrokopterlar",
                     },
                     {
-                        id: nanoid(),
-                        name: "Knopkali telefonlar",
-                        path: "category/knopkali-telefonlar-14262"
-                    },
-                    {
-                        id: nanoid(),
-                        name: "Smartfonlar",
-                        path: "category/smartfonlar-12690"
-                    },
-                    {
-                        id: nanoid(),
-                        name: "Ehtiyot qismlari va ta'mirlash",
-                        path: "category/ehtiyot-qismlar-va-tamirlash-15335"
-                    },
-                    {
-                        id: nanoid(),
-                        name: "Statsionar telefonlar",
-                        path: "category/statsionar-telefonlar-13733"
-                    },
+                        id: 196,
+                        name: "Kvadrokopterlar uchun aksessuarlar",
+                    }
                 ]
-            }
+            },
         ]
     },
 
-    {
-        id: nanoid(),
-        name: "Maishiy texnika",
-        img: MaisheyTexnika,
-        path: "category/maishiy-texnika-10004",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Maishiy texnika",
+    //         img: MaisheyTexnika,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Kiyimlar",
-        img: Kiyim,
-        path: "category/kiyimlar-10014",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Kiyimlar",
+    //         img: Kiyim,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Poyabzallar",
-        img: Poyabzal,
-        path: "category/poyabzallar-10013",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Poyabzallar",
+    //         img: Poyabzal,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Aksessuarlar",
-        img: Aksessuarlar,
-        path: "category/aksessuarlar-10003",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Aksessuarlar",
+    //         img: Aksessuarlar,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Go'zallik va parvarish",
-        img: GuzallikVaParvarish,
-        path: "category/guzallik-va-parvarish-10012",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Go'zallik va parvarish",
+    //         img: GuzallikVaParvarish,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Salomatlik",
-        img: Salomatlik,
-        path: "category/salomatlik-10009",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Salomatlik",
+    //         img: Salomatlik,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Uy-ro'zg'or buyumlari",
-        img: UyRuzgorBuyumlari,
-        path: "category/uy-ruzgor-buyumlari-10018",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Uy-ro'zg'or buyumlari",
+    //         img: UyRuzgorBuyumlari,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Qurilish va ta'mirlash",
-        img: Qurilish,
-        path: "category/qurilish-va-tamirlash-10016",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Qurilish va ta'mirlash",
+    //         img: Qurilish,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Avtotovarlar",
-        img: AutoTovarlar,
-        path: "category/avtotovarlar-10002",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Avtotovarlar",
+    //         img: AutoTovarlar,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Bolalar tovarlari",
-        img: BolalarTovarlari,
-        path: "category/bolalar-tovarlari-10007",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Bolalar tovarlari",
+    //         img: BolalarTovarlari,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Xobbi va ijod",
-        img: XobbiVaIjod,
-        path: "category/xobbi-va-ijod-10008",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Xobbi va ijod",
+    //         img: XobbiVaIjod,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Sport va hordiq",
-        img: SportVaHordiq,
-        path: "category/sport-va-hordiq-10015",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Sport va hordiq",
+    //         img: SportVaHordiq,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Oziq-ovqat mahsulotlari",
-        img: OziqOvqat,
-        path: "oziq-ovqat-mahsulotlari-1821",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Oziq-ovqat mahsulotlari",
+    //         img: OziqOvqat,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Maishiy kimyoviy moddalar",
-        img: MaishiyKimyoviyModdalar,
-        path: "category/maishiy-kimyoviy-moddalar-10005",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Maishiy kimyoviy moddalar",
+    //         img: MaishiyKimyoviyModdalar,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Kanselyariya tovarlari",
-        img: KanselyariyaTovarlari,
-        path: "category/kanselyariya-tovarlari-10010",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Kanselyariya tovarlari",
+    //         img: KanselyariyaTovarlari,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Hayvonlar uchun tovarlar",
-        img: HayvonlarTovarlari,
-        path: "category/hayvonlar-uchun-tovarlar-10019",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Hayvonlar uchun tovarlar",
+    //         img: HayvonlarTovarlari,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Kitoblar",
-        img: Kitoblar,
-        path: "category/kitoblar-10011",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Kitoblar",
+    //         img: Kitoblar,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Dacha, bog' va tomorqa",
-        img: Dacha,
-        path: "category/dacha-bog-va-tomorqa-10006",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Dacha, bog' va tomorqa",
+    //         img: Dacha,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 
-    {
-        id: nanoid(),
-        name: "Reabilitatsiya uchun subsidiyalangan mahsulotlar",
-        img: Salomatlik,
-        path: "category/reabilitatsiya-uchun-subsidiyalangan-mahsulotlar-12087",
-        subcategory: [
-            {
-                id: nanoid(),
-                name: "",
-                path: "",
-                items: [
-                    {
-                        id: nanoid(),
-                        name: "",
-                        path: ""
-                    }
-                ]
-            }
-        ]
-    },
+    //     {
+    //         id: ,
+    //         name: "Reabilitatsiya uchun subsidiyalangan mahsulotlar",
+    //         img: Salomatlik,
+    //         subcategory: [
+    //             {
+    //                 id: ,
+    //                 name: "",
+    //                 items: [
+    //                     {
+    //                         id: ,
+    //                         name: "",
+    //                     }
+    //                 ]
+    //             }
+    //         ]
+    //     },
 ]
