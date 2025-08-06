@@ -10,7 +10,7 @@ import {
     // KanselyariyaTovarlari,
     // Kitoblar,
     // Kiyim,
-    // MaisheyTexnika,
+    MaisheyTexnika,
     // MaishiyKimyoviyModdalar,
     // OziqOvqat,
     // Poyabzal,
@@ -456,23 +456,90 @@ export const catalogs: Catalog[] = [
         ]
     },
 
-    //     {
-    //         id: ,
-    //         name: "Maishiy texnika",
-    //         img: MaisheyTexnika,
-    //         subcategory: [
-    //             {
-    //                 id: ,
-    //                 name: "",
-    //                 items: [
-    //                     {
-    //                         id: ,
-    //                         name: "",
-    //                     }
-    //                 ]
-    //             }
-    //         ]
-    //     },
+    {
+        id: 197,
+        name: "Maishiy texnika",
+        img: MaisheyTexnika,
+        subcategory: [
+            {
+                id: 198,
+                name: "Katta maishiy texnika",
+                items: [
+                    {
+                        id: 199,
+                        name: "Suv uchun kulerlar va aksessuarlar",
+                    },
+                    {
+                        id: 200,
+                        name: "Oshxona dudburonlari",
+                    },
+                    {
+                        id: 201,
+                        name: "Qaytish panellari",
+                    },
+                    {
+                        id: 202,
+                        name: "Katta maishiy texnika uchun aksessuarlar",
+                    },
+                    {
+                        id: 203,
+                        name: "Sovutgichlar va muzlatgichlar",
+                    },
+                    {
+                        id: 204,
+                        name: "Kir yuvish mashinalari",
+                    },
+                    {
+                        id: 205,
+                        name: "Pechlar",
+                    },
+                    {
+                        id: 206,
+                        name: "Pechkalar",
+                    },
+                    {
+                        id: 207,
+                        name: "Idish yuvish mashinasi",
+                    },
+                    {
+                        id: 208,
+                        name: "Quritgich mashinasi",
+                    },
+                ]
+            },
+
+            {
+                id: 209,
+                name: "Uy uchun texnika",
+                items: [
+                    {
+                        id: 210,
+                        name: "Changyutgichlar va aksessuarlar"
+                    },
+                    {
+                        id: 211,
+                        name: "Dazmollar va bug'lagichlar"
+                    },
+                    {
+                        id: 212,
+                        name: "Tikuv mashinalari va aksessuarlari"
+                    },
+                    {
+                        id: 213,
+                        name: "Sterilizatorlar"
+                    },
+                    {
+                        id: 214,
+                        name: "Namlab tozalash apparatlari"
+                    },
+                    {
+                        id: 215,
+                        name: "Qoʻl uchun quritgichlar"
+                    },
+                ]
+            },
+        ]
+    },
 
     //     {
     //         id: ,
