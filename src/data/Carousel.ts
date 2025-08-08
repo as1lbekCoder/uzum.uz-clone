@@ -3,7 +3,7 @@ import {
     BannerImg2,
     BannerImg4,
     BannerImg5,
-    BannerImg7
+    BannerImg7,
 } from "@/assets/assests"
 
 const Carousel: CarouselProps[] = [

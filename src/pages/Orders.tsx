@@ -1,6 +1,6 @@
 const Orders = () => {
   return (
-    <div>Orders</div>
+    <main>Orders</main>
   )
 }
 

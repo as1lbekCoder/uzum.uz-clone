@@ -1,9 +1,9 @@
 const SinglePage = () => {
 
   return (
-    <div>
+    <main>
       
-    </div>
+    </main>
   )
 }
 
