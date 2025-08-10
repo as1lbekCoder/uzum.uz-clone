@@ -1,6 +1,9 @@
 const Home = () => {
   return (
-    <main>Home</main>
+    <main>
+      <h1>Salom, dunyo!</h1>
+      <p>Bu sahifa SEO uchun misol.</p>
+    </main>
   )
 }
 

@@ -1,7 +1,7 @@
 import {
   Footer,
   Navbar
-} from "@/components/componentImportData"
+} from "../components/componentImportData"
 import { Outlet } from "react-router-dom"
 
 const Layout = () => {

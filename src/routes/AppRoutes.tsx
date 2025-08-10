@@ -12,7 +12,7 @@ import {
     Orders,
     Register,
     Wishlist,
-} from '@/pages/importData'
+} from '../pages/importData'
 
 const AppRoutes = () => {
     return (
