@@ -5,7 +5,7 @@ import LikeSvg from "../icons/LikeSvg"
 import BagSvg from "../icons/BagSvg"
 import Navigator from "./Navigator"
 import SearchInput from "./SearchInput"
-import Catalog from "./Catalog"
+import  Catalog from "./Catalog"
 
 const Navbar = () => {
   return (

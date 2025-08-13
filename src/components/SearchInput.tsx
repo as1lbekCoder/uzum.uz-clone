@@ -1,12 +1,31 @@
-import { useRef, useState } from "react"
+import { useEffect, useState } from "react"
+import { AnimatePresence, motion } from "motion/react"
 import { Input } from "./ui/input"
 import { Button } from "./ui/button"
 import SearchSvg from "@/icons/SearchSvg"
-import { AnimatePresence, motion } from "framer-motion"
+import Links from "./custom/Link"
+import axios from "axios"
+import { API_BASE } from "@/utils/API"
+import { type ProductsProps } from "@/types/Products.type"
 
 const SearchInput = () => {
     const [isCartVisible, setIsCartVisible] = useState(false)
     const [value, setValue] = useState("")
+    const [products, setProducts] = useState<ProductsProps[]>([])
+    const [error, setError] = useState<string | null>(null)
+
+    useEffect(() => {
+        axios(`${API_BASE}api/products`)
+            .then((res) => {
+                setProducts(res.data)
+            })
+            .catch(() => {
+                setError("Mahsulotlarni olishda xtolik yuz berdi!")
+            })
+    }, [])
+
+
+    if (error) return <p>{error}</p>
 
     const closeCart = () => setIsCartVisible(false)
 
@@ -32,31 +51,30 @@ const SearchInput = () => {
             <AnimatePresence>
                 {isCartVisible && (
                     <>
-                        {/* Overlay */}
                         <motion.div
-                            className="fixed inset-0 bg-black/40 z-40"
+                            className="fixed top-36 inset-0 bg-black/40 z-40"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={closeCart}
                         />
 
-                        {/* Dropdown */}
                         <motion.div
-                            className="absolute top-[44px] left-0 w-full bg-white shadow-lg rounded-b-2xl px-3 py-5 z-[50] h-[550px] border-t-0 border"
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 10 }}
+                            className="absolute top-[34px] left-0 w-full bg-white shadow-lg rounded-b-2xl px-3 py-5 z-[50] h-[550px] border-t-0 border"
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 10 }}
+                            exit={{ opacity: 0, y: -5 }}
                             transition={{ duration: 0.25 }}
                         >
-                            <div className="sticky top-0 -mx-3 bg-gray-100 py-3 px-3">
-                                <h2 className="font-medium text-xl">Tavsiya etamiz</h2>
+                            <div className="-mt-5 -mx-3 py-3 px-3">
+                                <h2 className="font-medium text-xl cursor-text">Tavsiya etamiz</h2>
                             </div>
-                            <div className="mt-5 flex flex-col space-y-2">
-                                <span>sdfg</span>
-                                <span>sdfg</span>
-                                <span>sdfg</span>
-                                <span>sdfg</span>
+                            <div className="flex flex-col space-y-2">
+                                {products.map(item => (
+                                    <div key={item.id}>
+                                        <Links to={""}>{item.title}</Links>
+                                    </div>
+                                ))}
                             </div>
                         </motion.div>
                     </>
