@@ -1,17 +1,17 @@
 interface CatalogItem {
     id: number,
-    name: string,
+    title: string,
 };
 
 interface CatalogSubcategory {
     id: number,
-    name: string,
-    items: CatalogItem[]
+    title: string,
+    cildren: CatalogItem[]
 };
 
 export interface Catalog {
     id: number,
-    name: string,
+    title: string,
     img: string,
-    subcategory: CatalogSubcategory[]
+    children: CatalogSubcategory[]
 }

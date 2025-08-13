@@ -1,4 +1,3 @@
-import Catalog from "./Catalog"
 import UzumHomeSvg from "../assets/homeImgs/uzum-home.svg"
 import Links from "./custom/Link"
 import UserSvg from "../icons/UserSvg"
@@ -6,6 +5,7 @@ import LikeSvg from "../icons/LikeSvg"
 import BagSvg from "../icons/BagSvg"
 import Navigator from "./Navigator"
 import SearchInput from "./SearchInput"
+import Catalog from "./Catalog"
 
 const Navbar = () => {
   return (
