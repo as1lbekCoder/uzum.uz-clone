@@ -1,4 +1,4 @@
-interface CatalogsItem {
+export interface CatalogsItem {
     id: number,
     title: string,
 };
