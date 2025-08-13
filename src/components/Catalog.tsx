@@ -7,16 +7,15 @@ import { API_BASE } from "@/utils/API"
 import type { Catalog } from "@/types/Catalog.type"
 import Links from "./custom/Link"
 import LiftSvg from "@/icons/LiftSvg"
-import SEO from "./SEO"
 import CatalogIcon from "@/icons/catalogIcon"
 import CloseIcon from "@/icons/closeIcon"
 
 const Catalog = () => {
   const [togle, setTogle] = React.useState<boolean>(false)
-  const [error, setError] = React.useState<string | null>(null)
   // const [hoveredID, setHoveredID] = React.useState()
   const [categories, setCategories] = React.useState<Catalog[]>([])
   const loader = useLocation()
+
 
   useEffect(() => {
     axios(`${API_BASE}api/categories`)
@@ -25,8 +24,8 @@ const Catalog = () => {
         setCategories(res.data)
 
       })
-      .catch(() => {
-        setError("Kategoriya olishda xatolik!")
+      .catch((error) => {
+        console.error("Kategoriya olishda xatolik!", { error })
       })
   }, [])
 
@@ -34,19 +33,9 @@ const Catalog = () => {
     setTogle(false)
   }, [loader.pathname])
 
-  if (error) return <p>{error}</p>
-
   return (
     <>
-      {categories.length > 0 && (
-        <SEO
-          title={categories[0].title}
-          description={`Barcha kategoriyalar: ${categories.map(c => c.title).join(", ")}`}
-          image={`${categories[0].img}`}
-          keywords={categories.map(c => c.title).join(", ")}
-        />
-      )}
-      <motion.div className="containers">
+      <motion.div className="containers hidden lg:block">
         <Button
           onClick={() => setTogle(!togle)}
           className="bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-700 transition-all shadow-none rounded h-11 cursor-pointer">

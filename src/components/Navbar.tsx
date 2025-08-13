@@ -5,22 +5,22 @@ import LikeSvg from "../icons/LikeSvg"
 import BagSvg from "../icons/BagSvg"
 import Navigator from "./Navigator"
 import SearchInput from "./SearchInput"
-import  Catalog from "./Catalog"
+import Catalog from "./Catalog"
 
 const Navbar = () => {
   return (
     <header className="flex flex-col gap-4">
       <div className="bg-gray-100 py-2">
-        <div className="containers w-full flex items-center justify-between">
+        <div className="containers px-3 lg:px-0 w-full flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Navigator />
             <Links
               to={""}
-              className="font-medium"
+              className="font-medium hidden lg:block"
             >
               Topshirish punktlari</Links>
           </div>
-          <ul className="flex items-center gap-3">
+          <ul className="items-center gap-3 hidden lg:flex">
             <li>
               <a
                 href="https://seller.uzum.uz/"
@@ -49,8 +49,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className="containers flex items-center gap-7 w-full">
-        <Links to={"/"}>
+      <nav className="containers flex items-center lg:gap-7 w-full">
+        <Links to={"/"} className="hidden lg:block">
           <img
             className="ml-0 pl-0 w-100 h-12"
             src={UzumHomeSvg}
@@ -61,8 +61,8 @@ const Navbar = () => {
           <Catalog />
           <SearchInput />
         </div>
-        <ul className="flex items-center gap-2.5">
-          <li className="cursor-pointer hover:bg-gray-200 py-2.5 px-3 hidden lg:flex rounded transition-all">
+        <ul className="items-center gap-2.5 hidden lg:flex">
+          <li className="cursor-pointer hover:bg-gray-200 py-2.5 px-3 rounded transition-all">
             <Links
               to={""}
               className="flex items-center gap-0.5"
@@ -77,10 +77,10 @@ const Navbar = () => {
               className="flex items-center gap-0.5"
             >
               <LikeSvg />
-              <span className="font-medium hidden lg:flex">Saralanganlar</span>
+              <span className="font-medium">Saralanganlar</span>
             </Links>
           </li>
-          <li className="cursor-pointer hover:bg-gray-200 py-2.5 px-3 rounded hidden lg:flex transition-all">
+          <li className="cursor-pointer hover:bg-gray-200 py-2.5 px-3 rounded transition-all">
             <Links
               to={""} className="flex items-center gap-0.5"
             >
