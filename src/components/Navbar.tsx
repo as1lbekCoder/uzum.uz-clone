@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className="containers flex items-center lg:gap-7 w-full">
+      <nav className="containers flex items-center lg:gap-3 w-full">
         <Links to={"/"} className="hidden lg:block">
           <img
             className="ml-0 pl-0 w-100 h-12"
@@ -57,7 +57,7 @@ const Navbar = () => {
             alt="This is a home market home picture"
           />
         </Links>
-        <div className="flex items-center w-full gap-2.5">
+        <div className="flex items-center w-full gap-1">
           <Catalog />
           <SearchInput />
         </div>

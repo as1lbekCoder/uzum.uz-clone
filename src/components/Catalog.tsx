@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "motion/react"
 import { Button } from "./ui/button"
 import axios from "axios"
 import { API_BASE } from "@/utils/API"
-import type { Catalog } from "@/types/Catalog.type"
+import type { Catalogs } from "@/types/Catalog.type"
 import Links from "./custom/Link"
 import LiftSvg from "@/icons/LiftSvg"
 import CatalogIcon from "@/icons/catalogIcon"
@@ -13,7 +13,7 @@ import CloseIcon from "@/icons/closeIcon"
 const Catalog = () => {
   const [togle, setTogle] = React.useState<boolean>(false)
   // const [hoveredID, setHoveredID] = React.useState()
-  const [categories, setCategories] = React.useState<Catalog[]>([])
+  const [categories, setCategories] = React.useState<Catalogs[]>([])
   const loader = useLocation()
 
 
@@ -60,12 +60,16 @@ const Catalog = () => {
               <aside className="w-[21%] border-r">
                 {categories.map(item => (
                   <div key={item.id}>
-                    <Links to={""} className="flex items-center justify-between">
+                    <Links to={""} className="flex items-center justify-between py-2.5 px-1 rounded-l font-medium hover:bg-gray-200 hover:text-blue-600">
                       <div className="flex items-center gap-1">
-                        <img src={item.img} alt={item.title} />
+                        <img
+                          className="w-7 h-7"
+                          src={item.img}
+                          alt={item.title}
+                        />
                         {item.title}
                       </div>
-                      <LiftSvg className="w-6 h-6" />
+                      <LiftSvg className="w-6 h-6 shrink-0" />
                     </Links>
                   </div>
                 ))}

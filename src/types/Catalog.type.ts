@@ -1,17 +1,17 @@
-interface CatalogItem {
+interface CatalogsItem {
     id: number,
     title: string,
 };
 
-interface CatalogSubcategory {
+interface CatalogsSubcategory {
     id: number,
     title: string,
-    cildren: CatalogItem[]
+    cildren: CatalogsItem[]
 };
 
-export interface Catalog {
+export interface Catalogs {
     id: number,
     title: string,
     img: string,
-    children: CatalogSubcategory[]
+    children: CatalogsSubcategory[]
 }
