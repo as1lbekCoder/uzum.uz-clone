@@ -47,7 +47,7 @@ const SearchInput = () => {
         <div className="relative w-full lg:mt-0">
             <div className="lg:mt-0 w-full flex items-center z-[60] px-3">
                 <div
-                    className={`flex items-center border w-full rounded overflow-hidden h-11 transition-all ${isCartVisible ? "rounded-b-none" : ""
+                    className={`flex items-center border max-lg:border-gray-500 w-full rounded overflow-hidden h-11 transition-all ${isCartVisible ? "rounded-b-none" : ""
                         }`}
                 >
                     <SearchSvg className="absolute left-4 lg:hidden z-[60]" />

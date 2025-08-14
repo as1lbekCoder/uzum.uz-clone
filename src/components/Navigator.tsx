@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import axios from "axios";
 import { API_BASE } from "@/utils/API";
 import { type CatalogsItem } from "@/types/Catalog.type";
-import { ChevronRight, X, Search, ChevronDown } from "lucide-react";
+import { ChevronRight, X, Search, ChevronDown, MapPin } from "lucide-react";
 import { Input } from "./ui/input";
 import { AnimatePresence, motion } from "motion/react";
 
@@ -50,11 +50,12 @@ const Navigator = () => {
     );
 
     return (
-        <div className="relative containers">
+        <div className="relative">
             <Button
-                className="cursor-pointer flex items-center justify-between gap-2 bg-transparent hover:bg-transparent shadow-none text-black text-md max-md:text-lg lg:text-md"
+                className="cursor-pointer flex items-center bg-transparent hover:bg-transparent shadow-none text-black text-md lg:text-md !p-0 gap-0.5"
                 onClick={handleTogle}
             >
+                <MapPin className="!w-5 !h-5" />
                 <span>{selectedCity}</span>
                 <ChevronDown className="!h-5 !w-5 md:!w-6 md:!h-6" />
             </Button>
@@ -62,19 +63,20 @@ const Navigator = () => {
             <AnimatePresence initial={false}>
                 {togle && (
                     <>
-                        <div className="fixed inset-0 top-0 left-0 bg-black/50 bg-opacity-50 z-80">
-
-                        </div>
-                        <div className="fixed inset-0 flex items-center justify-center z-80">
+                        <div
+                            onClick={handleTogle}
+                            className="fixed inset-0 top-0 left-0 bg-black/50  z-80"
+                        />
+                        <div className="absolute top-1 lg:top-1/2 lg:left-1/2 lg:translate-x-1/3 lg:translate-y-5 z-90">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0, y: 100 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0, y: 100 }}
-                                className="bg-white w-[650px] max-w-[90%] rounded-lg flex flex-col h-[540px] lg:h-[680px] overflow-hidden p-5">
+                                className="bg-white w-[400px] md:w-[550px] md:h-[600px] lg:w-[650px] rounded-lg flex flex-col h-[540px] lg:h-[680px] overflow-hidden p-5">
                                 <div className="flex justify-between items-center py-4 border-b border-gray-200">
                                     <h3 className="text-xl font-semibold">Shaharni tanlash</h3>
                                     <Button variant="ghost" onClick={handleTogle} className="cursor-pointer">
-                                        <X className="!h-6 !w-6 text-gray-500" />
+                                        <X className="!h-6 !w-6 md:!w-7 md:!h-7 text-gray-500" />
                                     </Button>
                                 </div>
                                 <div className="relative my-4">

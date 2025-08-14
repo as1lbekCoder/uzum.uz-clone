@@ -47,7 +47,6 @@ const Navbar = () => {
 
             </li>
           </ul>
-          <p className="cursor-auto lg:hidden md:text-lg">yetkazib beriladigan shahar</p>
         </div>
       </div>
 
