@@ -9,6 +9,7 @@ import Links from "./custom/Link"
 import LiftSvg from "@/icons/LiftSvg"
 import CatalogIcon from "@/icons/catalogIcon"
 import CloseIcon from "@/icons/closeIcon"
+import Slugify from "@/utils/Slugify"
 
 const Catalog = () => {
   const [togle, setTogle] = React.useState<boolean>(false)
@@ -16,11 +17,9 @@ const Catalog = () => {
   const [categories, setCategories] = React.useState<Catalogs[]>([])
   const loader = useLocation()
 
-
   useEffect(() => {
     axios(`${API_BASE}api/categories`)
       .then((res) => {
-        console.log(res.data);
         setCategories(res.data)
 
       })
@@ -60,7 +59,7 @@ const Catalog = () => {
               <aside className="w-[21%] border-r">
                 {categories.map(item => (
                   <div key={item.id}>
-                    <Links to={""} className="flex items-center justify-between py-2.5 px-1 rounded-l font-medium hover:bg-gray-200 hover:text-blue-600">
+                    <Links to={`/category/${Slugify(item.title)}-${item.id}`} className="flex items-center justify-between py-2.5 px-1 rounded-l font-medium hover:bg-gray-200 hover:text-blue-600">
                       <div className="flex items-center gap-1">
                         <img
                           className="w-7 h-7"

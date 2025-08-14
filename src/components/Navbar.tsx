@@ -18,7 +18,8 @@ const Navbar = () => {
               to={""}
               className="font-medium hidden lg:block"
             >
-              Topshirish punktlari</Links>
+              Topshirish punktlari
+            </Links>
           </div>
           <ul className="items-center gap-3 hidden lg:flex">
             <li>
@@ -46,6 +47,7 @@ const Navbar = () => {
 
             </li>
           </ul>
+          <p className="cursor-auto lg:hidden md:text-lg">yetkazib beriladigan shahar</p>
         </div>
       </div>
 
