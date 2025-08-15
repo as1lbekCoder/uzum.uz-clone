@@ -36,7 +36,7 @@ const Hero = () => {
                                             <img src={item.img} alt="This is carousel image" />
                                         </a>
                                     ) : (
-                                        <Links to={`/category/${Slugify(item.link)}--${item.id}`}>  
+                                        <Links to={`/category/${Slugify(item.link)}--${item.id}`}>
                                             <img src={item.img} alt="This is carousel image" />
                                         </Links>
                                     )}

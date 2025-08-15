@@ -1,4 +1,4 @@
-export interface CarouselProps {
+export type CarouselProps = {
     id: number,
     link: string,
     img: string
