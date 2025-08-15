@@ -12,6 +12,7 @@ import {
     Orders,
     Register,
     Wishlist,
+    Careers,
 } from '../pages/importData'
 
 const AppRoutes = () => {
@@ -29,6 +30,7 @@ const AppRoutes = () => {
                     <Route path={"orders"} element={<Orders />} />
                     <Route path={"wishlist"} element={<Wishlist />} />
                     <Route path={"register"} element={<Register />} />
+                    <Route path={"about/careers"} element={<Careers />} />
                     <Route path={"*"} element={<NotFound />} />
                 </Route>
             </Routes>
