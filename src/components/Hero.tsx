@@ -49,8 +49,8 @@ const Hero = () => {
                             )
                         })}
                     </CarouselContent>
-                    <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-700 rounded-full p-5 cursor-pointer hidden lg:block" />
-                    <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-700 rounded-full p-5 cursor-pointer hidden lg:block" />
+                    <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-700 rounded-full p-5 cursor-pointer hidden lg:flex" />
+                    <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-700 rounded-full p-5 cursor-pointer hidden lg:flex" />
                 </Carousel>
             </section>
             <section>

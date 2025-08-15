@@ -22,7 +22,6 @@ const Catalog = () => {
     axios(`${API_BASE}api/categories`)
       .then((res) => {
         setCategories(res.data)
-        console.log(res.data);
 
         if (res.data.length > 0) {
           setHoveredID(res.data[0].id)
