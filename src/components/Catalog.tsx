@@ -55,7 +55,7 @@ const Catalog = () => {
               initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: 20 }}
               exit={{ opacity: 0, y: 0 }}
-              className="absolute right-0 left-0 containers flex w-full">
+              className="absolute right-0 left-0 containers flex w-full z-80">
               <aside className="w-[21%] border-r">
                 {categories.map(item => (
                   <div key={item.id}>
