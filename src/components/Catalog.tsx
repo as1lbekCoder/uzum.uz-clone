@@ -10,10 +10,11 @@ import LiftSvg from "@/icons/LiftSvg"
 import CatalogIcon from "@/icons/catalogIcon"
 import CloseIcon from "@/icons/closeIcon"
 import Slugify from "@/utils/Slugify"
+import { ChevronRight } from "lucide-react"
 
 const Catalog = () => {
   const [togle, setTogle] = React.useState<boolean>(false)
-  // const [hoveredID, setHoveredID] = React.useState()
+  const [hoveredID, setHoveredID] = React.useState<number | null>(null)
   const [categories, setCategories] = React.useState<Catalogs[]>([])
   const loader = useLocation()
 
@@ -21,7 +22,11 @@ const Catalog = () => {
     axios(`${API_BASE}api/categories`)
       .then((res) => {
         setCategories(res.data)
+        console.log(res.data);
 
+        if (res.data.length > 0) {
+          setHoveredID(res.data[0].id)
+        }
       })
       .catch((error) => {
         console.error("Kategoriya olishda xatolik!", { error })
@@ -51,30 +56,73 @@ const Catalog = () => {
         </Button>
         <AnimatePresence initial={false}>
           {togle && (
-            <motion.div
-              initial={{ opacity: 0, y: 0 }}
-              animate={{ opacity: 1, y: 20 }}
-              exit={{ opacity: 0, y: 0 }}
-              className="absolute right-0 left-0 containers flex w-full z-80">
-              <aside className="w-[21%] border-r">
-                {categories.map(item => (
-                  <div key={item.id}>
-                    <Links to={`/category/${Slugify(item.title)}-${item.id}`} className="flex items-center justify-between py-2.5 px-1 rounded-l font-medium hover:bg-gray-200 hover:text-blue-600">
-                      <div className="flex items-center gap-1">
-                        <img
-                          className="w-7 h-7"
-                          src={item.img}
-                          alt={item.title}
-                        />
-                        {item.title}
+            <>
+              <div
+                className="fixed inset-0 top-0 left-0 bg-transparent"
+                onClick={() => setTogle(false)}
+              />
+              <motion.div
+                initial={{ opacity: 0, y: 0 }}
+                animate={{ opacity: 1, y: 20 }}
+                exit={{ opacity: 0, y: 0 }}
+                className="absolute right-0 left-0 containers flex gap-10 w-full z-80 bg-white">
+                <aside className="w-[21%] border-r">
+                  {categories.map(item => (
+                    <div
+                      key={item.id}
+                      onMouseEnter={() => setHoveredID(item.id)}
+                    >
+                      <Links
+                        to={`/category/${Slugify(item.title)}-${item.id}`}
+                        className={`flex items-center justify-between py-2.5 px-1 rounded-l font-medium${hoveredID === item.id ? "text-xl bg-gray-200 text-blue-600 font-medium" : ""} transition-all`}>
+                        <div className="flex items-center gap-1">
+                          <img
+                            className="w-7 h-7"
+                            src={item.img}
+                            alt={item.title}
+                          />
+                          {item.title}
+                        </div>
+                        <LiftSvg className="w-6 h-6 shrink-0" />
+                      </Links>
+                    </div>
+                  ))}
+                </aside>
+                <div>
+                  {hoveredID && (
+                    <div>
+                      <Links
+                        to={`/categories/${Slugify(categories.find(c => c.id === hoveredID)?.title || "")}--${hoveredID}`}
+                        className="!flex items-center gap-1.5 cursor-pointer text-xl font-medium hover:text-blue-600 transition-all">
+                        {categories.find(c => c.id === hoveredID)?.title}
+                        <ChevronRight className="text-gray-800 w-6 h-6" />
+                      </Links>
+                      <div className="grid grid-cols-3">
+                        {categories.find(c => c.id === hoveredID)
+                          ?.children
+                          ?.map(item => (
+                            <div key={item.id}>
+                              <Links
+                                to={`/category/${Slugify(item.title)}--${item.id}`}
+                                className="font-medium hover:text-blue-600 transition-all"
+                              >
+                                {item.title}
+                              </Links>
+                              <ul>
+                                {item.cildren?.map(c => (
+                                  <li key={c.id}>
+                                    <Links className="hover:text-blue-600 transition-all " to={``}>{c.title}</Links>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
                       </div>
-                      <LiftSvg className="w-6 h-6 shrink-0" />
-                    </Links>
-                  </div>
-                ))}
-              </aside>
-              <div></div>
-            </motion.div>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            </>
           )}
         </AnimatePresence>
       </motion.div>
