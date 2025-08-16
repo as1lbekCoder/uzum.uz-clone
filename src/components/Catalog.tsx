@@ -65,7 +65,7 @@ const Catalog = () => {
                 animate={{ opacity: 1, y: 20 }}
                 exit={{ opacity: 0, y: 0 }}
                 className="absolute right-0 left-0 containers flex gap-10 w-full z-80 bg-white">
-                <aside className="w-[21%] border-r">
+                <aside className="w-[28%] border-r">
                   {categories.map(item => (
                     <div
                       key={item.id}
@@ -87,7 +87,6 @@ const Catalog = () => {
                     </div>
                   ))}
                 </aside>
-
                 {hoveredID && (
                   <div className="w-[100%]">
                     <Links

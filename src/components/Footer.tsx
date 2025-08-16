@@ -1,10 +1,12 @@
 import { Facebook, Instagram, Send, Youtube } from "lucide-react"
 import Links from "./custom/Link"
 import ScrinshotImageApp from "@/assets/appIcons/appImage.png"
+import appStore from "@/assets/appIcons/appStore.svg"
+import googlePlayStore from "@/assets/appIcons/googlePlayStore.svg"
 
 const Footer = () => {
   return (
-    <footer className="containers mt-5 flex flex-col gap-y-10 px-3">
+    <footer className="containers flex flex-col gap-y-10">
       <div className="flex flex-col items-center justify-between gap-2.5 lg:flex-row lg:items-start">
         <div className="flex flex-col items-center lg:items-start">
           <header>
@@ -89,10 +91,41 @@ const Footer = () => {
         <div className="flex flex-col gap-y-5">
           <div className="border p-5 rounded-sm gap-5 w-90 hidden lg:flex">
             <img className="w-23 h-23 object-cover" src={ScrinshotImageApp} alt="This is scrinshot app image" />
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col">
               <span className="font-medium flex flex-wrap leading-4.5 cursor-text">Ilovada xarid qilish qulayroq.</span>
               <span className="flex flex-wrap text-[13px] leading-4.5 cursor-text">Kamerani yo'naltiring va ilovani App Store va Google play orqali bepul yuklab oling.</span>
             </div>
+          </div>
+          <div className="flex flex-col items-center gap-5 lg:hidden">
+            <header>
+              <span className="font-medium cursor-text">Ilovani yuklab olish</span>
+            </header>
+            <ul className="flex flex-col items-center gap-y-2.5">
+              <li>
+                <a
+                  href="https://apps.apple.com/ru/app/uzum-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD/id1640483056"
+                  rel="nofollow noopener noreferrer"
+                >
+                  <img
+                    className="w-35 h-12"
+                    src={appStore}
+                    alt="This is a AppStore svg"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://play.google.com/store/apps/details?id=uz.uzum.app"
+                  rel="nofollow noopener noreferrer"
+                >
+                  <img
+                    className="w-35 h-12"
+                    src={googlePlayStore}
+                    alt="This is a GooglePlay svg"
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div className="flex flex-col items-center gap-y-2.5 lg:items-start">
@@ -101,7 +134,7 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/uzum.market"
                 rel="nofollow noopener noreferrer"
-                className="border p-2.5 rounded"
+                className="border p-2.5 rounded bg-gradient-to-tr from-orange-500 via-rose-600 to-fuchsia-500 text-white"
               >
                 <Instagram />
               </a>

@@ -32,10 +32,8 @@ const Hero = () => {
                                             href={item.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="z-70"
                                         >
                                             <img
-                                                className="z-60"
                                                 src={item.img}
                                                 alt="This is carousel image"
                                             />

@@ -50,7 +50,7 @@ const Navigator = () => {
     );
 
     return (
-        <div className="relative">
+        <div className="relative flex items-center">
             <Button
                 className="cursor-pointer flex items-center bg-transparent hover:bg-transparent shadow-none text-black text-md lg:text-md !p-0 gap-0.5"
                 onClick={handleTogle}

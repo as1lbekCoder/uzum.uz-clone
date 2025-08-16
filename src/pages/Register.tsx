@@ -1,6 +1,6 @@
 const Register = () => {
   return (
-    <main>Register</main>
+    <main className="containers">Register</main>
   )
 }
 

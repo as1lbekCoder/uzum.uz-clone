@@ -1,6 +1,6 @@
 const Account = () => {
   return (
-    <main>Account</main>
+    <main className="containers">Account</main>
   )
 }
 

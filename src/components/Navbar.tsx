@@ -6,6 +6,7 @@ import BagSvg from "../icons/BagSvg"
 import Navigator from "./Navigator"
 import SearchInput from "./SearchInput"
 import Catalog from "./Catalog"
+import { LanguageToggle } from "./LanguageTogle"
 
 const Navbar = () => {
   return (
@@ -14,12 +15,12 @@ const Navbar = () => {
         <div className="containers px-3 lg:px-0 w-full flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Navigator />
-            <Links
-              to={""}
+            <a
+              href="https://uzum.uz/uz/about/delivery-points"
               className="font-medium hidden lg:block"
             >
               Topshirish punktlari
-            </Links>
+            </a>
           </div>
           <ul className="items-center gap-3 hidden lg:flex">
             <li>
@@ -31,20 +32,20 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <Links to={""}
+              <a href="https://uzum.uz/uz/promo/pvz"
                 className="text-blue-500 font-medium hover:text-blue-600 transition-all"
               >
                 Topshirish punktini ochish
-              </Links>
+              </a>
             </li>
             <li>
-              <Links to={""} className="font-medium text-gray-600 hover:text-gray-700 transition-all" >Savol-javob</Links>
+              <Links to={"/faq"} className="font-medium text-gray-600 hover:text-gray-700 transition-all" >Savol-javob</Links>
             </li>
             <li>
-              <Links to={""} className="font-medium text-gray-600 hover:text-gray-700 transition-all">Buyurtmalarim</Links>
+              <Links to={"/user/orders"} className="font-medium text-gray-600 hover:text-gray-700 transition-all">Buyurtmalarim</Links>
             </li>
             <li>
-
+              <LanguageToggle />
             </li>
           </ul>
         </div>
@@ -65,7 +66,7 @@ const Navbar = () => {
         <ul className="items-center gap-2.5 hidden lg:flex">
           <li className="cursor-pointer hover:bg-gray-200 py-2.5 px-3 rounded transition-all">
             <Links
-              to={""}
+              to={"#auth"}
               className="flex items-center gap-0.5"
             >
               <UserSvg />
@@ -74,7 +75,7 @@ const Navbar = () => {
           </li >
           <li className="cursor-pointer hover:bg-gray-200 py-2.5 px-3 rounded transition-all">
             <Links
-              to={""}
+              to={"/wishes"}
               className="flex items-center gap-0.5"
             >
               <LikeSvg />
@@ -83,7 +84,7 @@ const Navbar = () => {
           </li>
           <li className="cursor-pointer hover:bg-gray-200 py-2.5 px-3 rounded transition-all">
             <Links
-              to={""} className="flex items-center gap-0.5"
+              to={"/cart"} className="flex items-center gap-0.5"
             >
               <BagSvg />
               <span className="font-medium">Savat</span>

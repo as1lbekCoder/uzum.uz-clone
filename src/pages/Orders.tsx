@@ -1,6 +1,6 @@
 const Orders = () => {
   return (
-    <main>Orders</main>
+    <main className="containers">Orders</main>
   )
 }
 
