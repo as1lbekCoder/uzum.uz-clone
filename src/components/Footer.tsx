@@ -4,37 +4,37 @@ import ScrinshotImageApp from "@/assets/appIcons/appImage.png"
 
 const Footer = () => {
   return (
-    <footer className="containers mt-5 flex flex-col gap-y-10">
-      <div className="flex justify-between">
-        <div>
+    <footer className="containers mt-5 flex flex-col gap-y-10 px-3">
+      <div className="flex flex-col items-center justify-between gap-2.5 lg:flex-row lg:items-start">
+        <div className="flex flex-col items-center lg:items-start">
           <header>
             <span className="font-medium cursor-text">Biz haqimizda</span>
           </header>
-          <ul className="flex flex-col mt-2.5 gap-y-2.5">
+          <ul className="flex flex-col items-center mt-2.5 gap-y-2.5 lg:items-start">
             <li>
-              <Links
-                to={""}
+              <a
+                href="https://uzum.uz/uz/about/delivery-points"
                 className="text-gray-500 text-sm"
               >
                 Topshirish punktlari
-              </Links>
+              </a>
             </li>
             <li>
-              <Links
-                to={"/about/careers"}
+              <a
+                href="https://uzum.uz/uz/about/careers"
                 className="text-gray-500 text-sm"
               >
                 Vakansiyalar
-              </Links>
+              </a>
             </li>
           </ul>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center lg:items-start">
           <header>
             <span className="font-medium cursor-text">Foydalanuvchilarga</span>
           </header>
-          <ul className="flex flex-col mt-2.5 gap-y-2.5">
+          <ul className="flex flex-col items-center mt-2.5 gap-y-2.5 lg:items-start">
             <li>
               <Links
                 to={""}
@@ -54,11 +54,11 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center lg:items-start">
           <header>
             <span className="font-medium cursor-text">Tadbirkorlarga</span>
           </header>
-          <ul className="flex flex-col mt-2.5 gap-y-2.5">
+          <ul className="flex flex-col items-center mt-2.5 gap-y-2.5 lg:items-start">
             <li>
               <Links
                 to={""}
@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-y-5">
-          <div className="border p-5 rounded-sm flex gap-5 w-90">
+          <div className="border p-5 rounded-sm gap-5 w-90 hidden lg:flex">
             <img className="w-23 h-23 object-cover" src={ScrinshotImageApp} alt="This is scrinshot app image" />
             <div className="flex flex-col gap-1">
               <span className="font-medium flex flex-wrap leading-4.5 cursor-text">Ilovada xarid qilish qulayroq.</span>
@@ -95,7 +95,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-y-2.5">
+          <div className="flex flex-col items-center gap-y-2.5 lg:items-start">
             <h3 className="font-medium cursor-text">Uzum ijtimoiy tarmoqlarda</h3>
             <div className="flex items-center gap-5">
               <a
@@ -133,8 +133,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="border-t py-5 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+
+      <div className="border-t py-5 flex flex-col items-center justify-between lg:flex-row gap-2.5 ">
+        <div className="flex flex-col items-center gap-4 lg:flex-row">
           <a
             href="https://legal.uzum.uz/privacy-policy-uz.html"
             rel="nofollow noopener noreferrer"
@@ -150,7 +151,7 @@ const Footer = () => {
             Foydalanuvchi kelishuvi
           </a>
         </div>
-        <p className="text-[13px] text-gray-500 cursor-text"> «2025© XK MCHJ «UZUM MARKET». STIR 309376127. Barcha huquqlar himoyalangan» </p>
+        <p className="text-[13px] text-center text-gray-500 cursor-text"> «2025© XK MCHJ «UZUM MARKET». STIR 309376127. Barcha huquqlar himoyalangan» </p>
       </div>
     </footer>
   )
